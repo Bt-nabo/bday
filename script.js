@@ -73,6 +73,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     observer.observe(wishesSection);
 
+    // Explicitly observe reels to ensure visibility
+    const reelsSection = document.getElementById('reels');
+    if (reelsSection) observer.observe(reelsSection);
+
     // --- Typing Effect ---
     // Note: Breaking lines with \n or <br> implementation
     const message = `Do you know how special you are?\nYour smile, your kindness, your presence...\nEverything about you makes the world brighter.\nI just wanted to take a moment to say...\nThank you for being you.`;
