@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Audio Player -->
+    <div class="audio-control">
+        <button id="mute-btn">🔇 Music Output</button>
+        <audio id="bg-music" loop>
+            <source src="https://cdn.pixabay.com/audio/2026/01/22/audio_fcf5f8226e.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="fullscreen-section">
+        <div class="floating-elements">
+            <!-- Dynamically added via JS -->
+        </div>
+        <div class="hero-content">
+            <h1 class="fade-in">Happy Birthday, <span class="highlight">Muskan Priya</span> 💖</h1>
+            <p class="fade-in delay-1">This little corner of the internet is just for you.</p>
+            <button id="start-btn" class="cta-btn fade-in delay-2">Click to begin your surprise 🎁</button>
+        </div>
+    </section>
+
+    <!-- Message Section -->
+    <section id="message" class="content-section hidden">
+        <div class="paper">
+            <div class="lines">
+                <p id="typing-text"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memory/Compliment Section -->
+    <section id="memories" class="content-section hidden">
+        <h2>Reasons You Are Amazing 🌸</h2>
+        <div class="slider-container">
+            <div class="card active">
+                <p>“Your smile can fix bad days.”</p>
+            </div>
+            <div class="card">
+                <p>“You make moments feel lighter.”</p>
+            </div>
+            <div class="card">
+                <p>“You deserve all the happiness today & always.”</p>
+            </div>
+            <div class="card">
+                <p>“Your kindness is a gift to everyone around you.”</p>
+            </div>
+            <button class="prev-btn">❮</button>
+            <button class="next-btn">❯</button>
+        </div>
+    </section>
+
+    <!-- Reels Section -->
+    <section id="reels" class="content-section hidden">
+        <h2>Selected reels for you 📸</h2>
+        <div class="reels-container">
+            <!-- Placeholder Reel 1 -->
+            <div class="reel-wrapper">
+                <blockquote class="instagram-media"
+                    data-instgrm-permalink="https://www.instagram.com/reel/DOq0B8vjdi0/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                    data-instgrm-version="14"></blockquote>
+            </div>
+            <!-- Placeholder Reel 2 -->
+            <div class="reel-wrapper">
+                <blockquote class="instagram-media"
+                    data-instgrm-permalink="https://www.instagram.com/reel/DUhGERuEw68/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                    data-instgrm-version="14"></blockquote>
+            </div>
+            <!-- Placeholder Reel 3 -->
+            <div class="reel-wrapper">
+                <blockquote class="instagram-media"
+                    data-instgrm-permalink="https://www.instagram.com/reel/DUgNRUPE4RP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                    data-instgrm-version="14"></blockquote>
+            </div>
+            <!-- Placeholder Reel 4 -->
+            <div class="reel-wrapper">
+                <blockquote class="instagram-media"
+                    data-instgrm-permalink="https://www.instagram.com/reel/DT-S-YMkXXj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                    data-instgrm-version="14"></blockquote>
+            </div>
+            <!-- Placeholder Reel 5 -->
+            <div class="reel-wrapper">
+                <blockquote class="instagram-media"
+                    data-instgrm-permalink="https://www.instagram.com/reel/DSXSFWtjw1H/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                    data-instgrm-version="14"></blockquote>
+            </div>
+            <!-- Placeholder Reel 6 -->
+            <div class="reel-wrapper">
+                <blockquote class="instagram-media"
+                    data-instgrm-permalink="https://www.instagram.com/reel/DQx5RVZDz1O/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                    data-instgrm-version="14"></blockquote>
+            </div>
+            <!-- Placeholder Reel 7 -->
+            <div class="reel-wrapper">
+                <blockquote class="instagram-media"
+                    data-instgrm-permalink="https://www.instagram.com/reel/DEO10gxPF1k/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                    data-instgrm-version="14"></blockquote>
+            </div>
+            <!-- Placeholder Reel 8 -->
+            <div class="reel-wrapper">
+                <blockquote class="instagram-media"
+                    data-instgrm-permalink="https://www.instagram.com/reel/DGVsELgsN8W/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                    data-instgrm-version="14"></blockquote>
+            </div>
+            <!-- Placeholder Reel 9 -->
+            <div class="reel-wrapper">
+                <blockquote class="instagram-media"
+                    data-instgrm-permalink="https://www.instagram.com/reel/DGmUtrUTlo7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                    data-instgrm-version="14"></blockquote>
+            </div>
+            <!-- Placeholder Reel 10 -->
+            <div class="reel-wrapper">
+                <blockquote class="instagram-media"
+                    data-instgrm-permalink="https://www.instagram.com/reel/DHMLR2pTbTZ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                    data-instgrm-version="14"></blockquote>
+            </div>
+        </div>
+        <p class="more-reels">and many more... ✨</p>
+        <script async src="//www.instagram.com/embed.js"></script>
+    </section>
+
+    <!-- Countdown/Surprise Section -->
+    <section id="surprise" class="content-section hidden">
+        <h2>Today isn’t just a date, it’s <em>your</em> day! 🎈</h2>
+        <div class="cake-container">
+            <div class="cake">
+                <div class="velas">
+                    <div class="fuego"></div>
+                    <div class="fuego"></div>
+                    <div class="fuego"></div>
+                    <div class="fuego"></div>
+                    <div class="fuego"></div>
+                </div>
+                <div class="cobertura"></div>
+                <div class="bizcocho"></div>
+            </div>
+        </div>
+        <button id="celebrate-btn" class="cta-btn fade-in delay-2" style="margin-top: 30px;">Celebrate Birthday!
+            🎂</button>
+    </section>
+
+    <!-- Special Wish & Final Section -->
+    <section id="wishes" class="fullscreen-section hidden">
+        <div class="stars"></div>
+        <div class="wish-content">
+            <h2 class="glow">May this year bring you peace, confidence, success, and reasons to smile every single day.
+            </h2>
+            <div class="final-message">
+                <h1>Once again… Happy Birthday, Lovely MUSU 🎉💗</h1>
+                <p>Never forget how amazing you are.</p>
+            </div>
+        </div>
+        <footer class="fade-out">Made with ❤️ for you.</footer>
+    </section>
+
+    <!-- Slideshow Overlay -->
+    <div id="slideshow-overlay" class="hidden">
+        <button id="close-slideshow">✕</button>
+        <div class="slideshow-content">
+            <h1 class="slideshow-title">Happy Birthday! 💖</h1>
+            <img id="slide-img" src="" alt="Birthday Memory">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
